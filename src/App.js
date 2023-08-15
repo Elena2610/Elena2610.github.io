@@ -1,7 +1,7 @@
 import './App.css';
 import React from "react";
 import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/Home";
+import Giphy from "./pages/Giphy";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Project from "./pages/Project";
@@ -14,7 +14,7 @@ function App() {
       <Nav /> 
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Giphy />
         </Route>
         <Route path="/About">
           <About />

@@ -8,7 +8,7 @@ const Projects = (props) => {
 return (
 
      <div className="Projects">
-         <h1>All projects</h1>
+         <h1>My projects</h1>
          {projects.map((projects) => {
              const {name, description} = projects;
              return (
