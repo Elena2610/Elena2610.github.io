@@ -1,5 +1,20 @@
-
 import React, { useState } from 'react'
+import styled from "styled-components";
+
+const Button = styled.button`
+  background-color: blue;
+  color: white;
+  font-size: 19px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+`;
+
+const Input = styled.input`
+background-color: white;
+font-size: 20px;
+margin: 10px 0px;
+`;
 
 function Form(props) {
   const [search, setSearch] = useState('')
@@ -21,13 +36,13 @@ function Form(props) {
       <>
         <form onSubmit={handleSubmit}>
           <label htmlFor="searchInput">Search:</label>
-          <input
+          <Input
             id="searchInput"
             type="text"
             value={search}
             onChange={handleChange}
           />
-          <input type="submit" value="Search for gif" />
+          <Button type="submit">Search for Gif / Random if Empty</Button>
         </form>
       </>
     );
