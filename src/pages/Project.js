@@ -1,5 +1,16 @@
 import React from 'react'
 import projects from "./ProjectList";
+import styled from "styled-components";
+
+const Button = styled.button`
+  background-color: blue;
+  color: white;
+  font-size: 19px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  box-shadow: 0px 2px 2px lightgray;
+  cursor: pointer;
+`;
 
 const Project = (props) => {
     const name = props.match.params.name;
@@ -28,14 +39,14 @@ let repositoryLink, deployment, technologies, image, iname;
               target='_blank'
               rel='noreferrer'
             >
-              <button>Github</button>
+              <Button>Github</Button>
             </a>
             <a
               href={deployment}
               target='_blank'
               rel='noreferrer'
             >
-              <button>Deployed Version</button>
+              <Button>Deployed Version</Button>
             </a>
             </div>
          </div>
